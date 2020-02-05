@@ -38,6 +38,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 1.4vw;
   color: #FC4445;
   background-color: #151515;
 }
@@ -56,6 +57,7 @@ nav ul li {
   width: 10vw;
   padding: 0 0.6vw;
   text-align: center;
+  cursor: pointer;
 }
 
 nav ul li:hover {
@@ -93,6 +95,7 @@ nav input {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   width: 50%;
@@ -187,6 +190,7 @@ nav input {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   width: 100%;
@@ -219,6 +223,7 @@ nav input {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   height: 18.5vw;
@@ -247,6 +252,7 @@ nav input {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   width: 32.5vw;
@@ -266,6 +272,7 @@ nav input {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   width: 80vw;
@@ -332,15 +339,17 @@ footer {
 #footBox table td {
   height: 0.5vw;
   font-size: 1vw;
+  cursor: pointer;
 }
 
 #footBox i {
-  height: 2.5vw;
-  width: 2.5vw;
+  height: 2vw;
+  width: 2vw;
   text-align: center;
-  line-height: 2.5vw;
-  font-size: 2vw;
+  line-height: 2vw;
+  font-size: 1vw;
   border-radius: 25vw;
+  cursor: pointer;
   color: #FC4445;
   background-color: #fff;
 }
@@ -367,6 +376,7 @@ footer {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   width: 80vw;
@@ -391,6 +401,7 @@ footer {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   height: 40vw;
@@ -443,6 +454,7 @@ footer {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   width: 50vw;
@@ -461,6 +473,7 @@ footer {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   width: 30vw;
@@ -483,6 +496,7 @@ footer {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  cursor: pointer;
   border: solid 0.3vw #f4f4f4;
   background-color: rgba(21, 21, 21, 0.4);
   height: 25vw;
@@ -494,5 +508,214 @@ footer {
 
 .col4-xLong .topic {
   padding-top: 0.7%;
+}
+
+/*--------------------------------MEDIA QUERIES*/
+@media only screen and (max-width: 768px) {
+  /*----------------MIXINS*/
+  /*---------------VARIABLES*/
+  /*---------------BANNER & NAV*/
+  #banner {
+    width: 100vw;
+    height: 12vw;
+  }
+  #banner img {
+    height: 10vw;
+  }
+  nav {
+    width: 100vw;
+    height: 7vw;
+    font-size: 2.4vw;
+  }
+  nav ul {
+    width: 50%;
+    line-height: 7vw;
+  }
+  nav input {
+    width: 22vw;
+    height: 3.5vw;
+    margin: 1.3vw 1.5vw;
+    font-size: 2.4vw;
+  }
+  /*---------------TOP STORIES*/
+  .newsWrap {
+    width: 90vw;
+    height: 75vh;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #topArticle {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+    border: solid 0.5vw #f4f4f4;
+    background-color: rgba(21, 21, 21, 0.4);
+    width: 30%;
+    height: 75vh;
+  }
+  #topArticle h1 {
+    font-size: 5vw;
+    z-index: 20;
+  }
+  #topArticle p {
+    font-size: 2vw;
+    padding: 1vw 0.5vw;
+    z-index: 20;
+  }
+  #topArticle .hBox {
+    height: 32%;
+  }
+  #topArticle .topic {
+    width: 50%;
+    height: 5%;
+    font-size: 2vw;
+    padding-top: 2%;
+  }
+  .topic {
+    width: 40%;
+    height: 8%;
+    font-size: 2vw;
+  }
+  .hBox {
+    height: 28%;
+  }
+  /*----------------------TOP RIGHT STORIES*/
+  #secondWrap {
+    width: 70%;
+    height: 90vh;
+  }
+  #secondWrap #secondTop {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+    border: solid 0.5vw #f4f4f4;
+    background-color: rgba(21, 21, 21, 0.4);
+    height: 35vh;
+    z-index: 1;
+  }
+  #secondWrap #secondTop .hBox {
+    height: 27%;
+  }
+  #secondWrap #secondTop .topic {
+    height: 10%;
+    font-size: 2vw;
+    padding-top: 0.5%;
+  }
+  .newsMinor {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+    border: solid 0.5vw #f4f4f4;
+    background-color: rgba(21, 21, 21, 0.4);
+    height: 40vh;
+    width: 45vw;
+  }
+  .newsMinor .hBox {
+    height: 23%;
+  }
+  .newsMinor .topic {
+    font-size: 2vw;
+    width: 40%;
+  }
+  /*----------------------COL 1*/
+  .col1 {
+    height: 40vh;
+    width: 90vw;
+  }
+  .col1 .newsWide {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+    border: solid 0.5vw #f4f4f4;
+    background-color: rgba(21, 21, 21, 0.4);
+    height: 40vh;
+  }
+  /*----------------------COL 2*/
+  .col2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+    border: solid 0.5vw #f4f4f4;
+    background-color: rgba(21, 21, 21, 0.4);
+    width: 90vw;
+    height: 50vh;
+  }
+  .col2 .hBox {
+    height: 19%;
+  }
+  .col2 .topic {
+    padding-top: 0.5%;
+  }
+  /*-------------------FOOTER*/
+  footer {
+    width: 100vw;
+  }
+  #footBox {
+    padding-top: 2vw;
+  }
+  #footBox table th {
+    font-size: 1.5vw;
+  }
+  #footBox table td {
+    font-size: 1.3vw;
+  }
+  #footBox i {
+    height: 2.5vw;
+    width: 2.5vw;
+    line-height: 2.5vw;
+    font-size: 1.5vw;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

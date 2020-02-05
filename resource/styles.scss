@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
+    cursor: pointer;
     border: solid 0.3vw #f4f4f4;
     background-color: rgba(21,21,21,0.4);
 }
@@ -44,6 +45,7 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    font-size: 1.4vw;
     color: #FC4445;
     background-color: #151515;
 
@@ -57,6 +59,7 @@ nav {
             width: 10vw;
             padding: 0 0.6vw;
             text-align: center;
+            cursor: pointer;
             &:hover {
                 color: #000;
                 background-color: #FC4445;
@@ -244,16 +247,18 @@ footer {
         td {
             height: 0.5vw;
             font-size: 1vw;
+            cursor: pointer;
         }
     }
 
     i {
-        height: 2.5vw;
-        width: 2.5vw;
+        height: 2vw;
+        width: 2vw;
         text-align: center;
-        line-height: 2.5vw;
-        font-size: 2vw;
+        line-height: 2vw;
+        font-size: 1vw;
         border-radius: 25vw;
+        cursor: pointer;
         color: #FC4445;
         background-color: #fff;
 
@@ -336,4 +341,191 @@ footer {
     .topic {
         padding-top: 0.7%;
     }
+}
+
+/*--------------------------------MEDIA QUERIES*/
+@media only screen and (max-width: 768px) {
+
+    /*----------------MIXINS*/
+    @mixin layout {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        cursor: pointer;
+        border: solid 0.5vw #f4f4f4;
+        background-color: rgba(21,21,21,0.4);
+    }
+
+    /*---------------VARIABLES*/
+    $width: 90vw;
+
+    /*---------------BANNER & NAV*/
+    #banner {
+        width: 100vw;
+        height: 12vw; //added 4
+    
+        img {
+            height: 10vw;
+        }
+    }
+    
+    nav {
+        width: 100vw;
+        height: 7vw;
+        font-size: 2.4vw;
+    
+        ul {
+            width: 50%;
+            line-height: 7vw;
+        }
+    
+        input {
+            width: 22vw;
+            height: 3.5vw;
+            margin: 1.3vw 1.5vw;
+            font-size: 2.4vw;
+        }
+    }
+
+    /*---------------TOP STORIES*/
+    .newsWrap {
+        width: $width;
+        height: 75vh;
+        margin: 0 auto;
+        display: flex;
+    }
+    
+    #topArticle {
+        @include layout;
+        width: 30%;
+        height: 75vh;
+    
+        h1 {
+            font-size: 5vw;
+            z-index: 20;
+        }
+        
+        p {
+            font-size: 2vw;
+            padding: 1vw 0.5vw;
+            z-index: 20;
+        }
+    
+        .hBox {
+            height: 32%;
+        }
+    
+        .topic {
+            width: 50%;
+            height: 5%;
+            font-size: 2vw;
+            padding-top: 2%;
+        }
+    }
+
+    .topic {
+        width: 40%;
+        height: 8%;
+        font-size: 2vw;
+    }
+    
+    .hBox {
+        height: 28%;
+    }
+    
+
+    /*----------------------TOP RIGHT STORIES*/
+    #secondWrap {
+        width: 70%;
+        height: 90vh;
+        
+    
+        #secondTop {
+            @include layout;
+            height: 35vh;
+            z-index: 1;
+    
+            .hBox {
+                height: 27%;
+            }
+
+            .topic {
+                height: 10%;
+                font-size: 2vw;
+                padding-top: 0.5%
+            }
+        }
+    }
+    .newsMinor {
+        @include layout;
+        height: 40vh;
+        width: 45vw;
+
+        .hBox {
+            height: 23%;
+        }
+
+        .topic {
+            font-size: 2vw;
+            width: 40%;
+        }
+    }
+
+    /*----------------------COL 1*/
+    .col1 {
+        height: 40vh;
+        width: $width;
+    
+        .newsWide {
+            @include layout;
+            height: 40vh;
+
+        }
+    }
+    /*----------------------COL 2*/
+    
+    .col2 {
+        @include layout;
+        width: $width;
+        height: 50vh;
+    
+        .hBox {
+            height: 19%;
+        }
+    
+        .topic {
+            padding-top:0.5%;
+        }
+    }
+
+    /*-------------------FOOTER*/
+    footer {
+        width: 100vw;
+    }
+    
+    #footBox {
+        padding-top: 2vw;
+
+    
+        table {
+    
+            th {
+                font-size: 1.5vw;
+            }
+    
+            td {
+                font-size: 1.3vw;
+            }
+        }
+    
+        i {
+            height: 2.5vw;
+            width: 2.5vw;
+            line-height: 2.5vw;
+            font-size: 1.5vw;
+        }
+    }
+
 }
