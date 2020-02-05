@@ -1,0 +1,339 @@
+//MIXINS
+@mixin layout { //everything article needs this
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border: solid 0.3vw #f4f4f4;
+    background-color: rgba(21,21,21,0.4);
+}
+
+//VARIABLES
+$width: 80vw;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+    background: url('media/bg.png') center, no-repeat;
+}
+
+#banner {
+    width: $width;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    color: #151515;
+    background-color: #FC4445;
+
+    img {
+        height: 6vw;
+        padding-left: 1vw;
+    }
+}
+
+nav {
+    width: $width;
+    height: 3vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #FC4445;
+    background-color: #151515;
+
+    ul {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        line-height: 3vw;
+
+        li {
+            width: 10vw;
+            padding: 0 0.6vw;
+            text-align: center;
+            &:hover {
+                color: #000;
+                background-color: #FC4445;
+                transition: all 500ms ease-in-out;
+            }
+        }
+    }
+
+    input {
+        width: 20vw;
+        height: 1.5vw;
+        margin: 0.5vw 1.5vw;
+    }
+}
+
+.newsWrap {
+    width: 80vw;
+    height: 37vw;
+    margin: 0 auto;
+    display: flex;
+}
+
+#topArticle {
+    @include layout;
+    width: 50%;
+    height: 37vw;
+
+    h1 {
+        font-size: 5vw;
+        z-index: 20;
+    }
+    
+    p {
+        font-size: 2vw;
+        padding: 1vw 0.5vw;
+        z-index: 20;
+    }
+
+    .hBox {
+        height: 45%;
+    }
+
+    .topic {
+        font-size: 2vw;
+    }
+}
+
+.topic {
+    width: 25%;
+    height: 8%;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 1% 0 0 1%;
+    border-radius: 0 1vw 1vw 0;
+    z-index: 20;
+    color: #000;
+    background-color: #FC4445;
+}
+
+.title {
+    font-size: 3vw;
+    z-index: 20;
+    padding-left: 0.5vw;
+}
+
+.preview {
+    font-size: 1.5vw;
+    padding: 1vw 0.5vw;;
+    z-index: 20;
+}
+
+.hBox {
+    position: absolute;
+    left: -100%;
+    height: 48%;
+    width: 100%;
+    opacity: 0.8;
+    background-color: #FC4445;
+    transition: 1000ms ease-in-out;
+}
+
+.artImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#secondWrap {
+    width: 50%;
+    height: 37vw;
+    display: flex;
+    flex-direction: column;
+    
+
+    #secondTop {
+        @include layout;
+        width: 100%;
+        height: 18.5vw;
+        z-index: 1;
+
+        .hBox {
+            height: 40%;
+        }
+    }
+}
+
+#storyWrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.newsMinor {
+    @include layout;
+    height: 18.5vw;
+    width: 20vw;
+}
+
+.col1 {
+    height: 18.5vw;
+    width: 80vw;
+    display: flex;
+    margin: 0 auto;
+
+    .newsWide {
+        @include layout;
+        width: 32.5vw;
+        height: 18.5vw;
+        //background-color: red;
+    }
+}
+
+.col2 {
+    @include layout;
+    width: 80vw;
+    height: 20vw;
+    margin: 0 auto;
+
+    .hBox {
+        height: 37%;
+    }
+
+    .topic {
+        padding-top:0.5%;
+    }
+}
+
+footer {
+    width: 80vw;
+    height: 15vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;;
+    background-color: #FC4445;
+}
+
+#footBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        height: 10vw;
+        padding-top: 1vw;
+    }
+
+    table {
+        width: 30vw;
+        height: 8vw;
+        padding-top: 10vw;
+        text-align: left;
+        border-collapse: collapse;
+
+        th {
+            height: 2vw;
+            font-size: 1.2vw;
+            font-weight: bold;
+            color: #333;
+            
+        }
+
+        td {
+            height: 0.5vw;
+            font-size: 1vw;
+        }
+    }
+
+    i {
+        height: 2.5vw;
+        width: 2.5vw;
+        text-align: center;
+        line-height: 2.5vw;
+        font-size: 2vw;
+        border-radius: 25vw;
+        color: #FC4445;
+        background-color: #fff;
+
+        &:nth-child(1) {
+            margin: 0.3vw 0;
+        }
+    }
+}
+
+//------------------------------TOPIC PAGES
+#pageWrapper {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.tBanner {
+    @include layout;
+    width: 80vw;
+    height: 20vw;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20vw;
+    font-size: 7vw;
+    background-color: rgba(252, 68, 69, 0.5);
+}
+
+.tBox {
+    @include layout;
+    height: 40vw;
+    width: 40vw;
+}
+
+.col3 {
+    display: flex;
+    justify-content: space-between;
+
+    .hBox {
+        height: 28%;
+    }
+
+    .topic {
+        width: 35%;
+        padding-top: 4%;
+        font-size: 1.6vw;
+    }
+}
+
+.col4 {
+    height: 27vw;
+    display: flex;
+    justify-content: space-between;
+
+    .hBox {
+        height: 28%;
+    }
+}
+
+.col4-long {
+    @include layout;
+    width: 50vw;
+}
+
+.col4-short {
+    @include layout;
+    width: 30vw;
+
+    .topic {
+        padding-top: 2%;
+    }
+}
+
+.col4-xLong {
+    @include layout;
+    height: 25vw;
+
+    .hBox {
+        height: 30%;
+    }
+
+    .topic {
+        padding-top: 0.7%;
+    }
+}
