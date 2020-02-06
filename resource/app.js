@@ -18,3 +18,12 @@ article.forEach(i => {
         i.firstChild.nextElementSibling.style.left = '-100%';
     })
 })
+
+const searchbar = document.querySelector('#search');
+const searchbtn = document.querySelector('#searchBtn');
+const nav = document.querySelector('#mobileNav');
+//create a class to toggle for this.
+searchbtn.addEventListener('click', () => {
+    searchbar.style.left = '40vw';
+    nav.style.left = '-80vw';
+});
