@@ -581,8 +581,17 @@ footer {
                 left: 120vw;
                 width: 65vw;
                 height: 8vw;
-                margin: 2.5vw 1.5vw;
+                margin: 3vw 1.5vw;
+                padding: 0.5vw 0;
                 font-size: 6vw;
+                border: none;
+                border-radius: 2vw;
+                color: #FC4445;
+                background-color: #282828;
+
+                &::placeholder {
+                    color: #FC4445;
+                }
             }
         }
 
