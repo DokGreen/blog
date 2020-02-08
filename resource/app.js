@@ -22,8 +22,24 @@ article.forEach(i => {
 const searchbar = document.querySelector('#search');
 const searchbtn = document.querySelector('#searchBtn');
 const nav = document.querySelector('#mobileNav');
+
+let b = true;
 //create a class to toggle for this.
 searchbtn.addEventListener('click', () => {
-    searchbar.style.left = '40vw';
-    nav.style.left = '-80vw';
+    //console.log(b);
+
+   if( b == true) {
+        b = !b;
+        nav.style.transitionDelay = '0ms';
+        nav.style.left = '-80vw';
+        searchbar.style.left = '30vw';
+        //console.log('clicked on');
+        //console.log(b);
+   } else{ 
+       b = !b;
+       searchbar.style.left = '120vw';
+       nav.style.transitionDelay = '500ms';
+       nav.style.left = '0vw';
+       //console.log('clicked off');
+   }
 });

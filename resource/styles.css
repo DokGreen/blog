@@ -39,6 +39,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.4vw;
+  overflow: hidden;
   color: #FC4445;
   background-color: #151515;
 }
@@ -736,8 +737,8 @@ footer {
   }
 }
 
+/*----------------------MOBILE*/
 @media only screen and (max-width: 480px) {
-  /*----------------MIXINS*/
   /*---------------VARIABLES*/
   /*---------------BANNER & NAV*/
   html {
@@ -769,10 +770,10 @@ footer {
   nav input {
     position: absolute;
     left: 120vw;
-    width: 22vw;
-    height: 3.5vw;
-    margin: 4.5vw 1.5vw;
-    font-size: 4vw;
+    width: 65vw;
+    height: 8vw;
+    margin: 2.5vw 1.5vw;
+    font-size: 6vw;
   }
   #mainNav {
     display: none;
@@ -787,7 +788,7 @@ footer {
   /*---------------TOP STORIES*/
   .newsWrap {
     width: 100vw;
-    height: 75vh;
+    height: 100vh;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -807,33 +808,34 @@ footer {
             justify-content: flex-end;
     overflow: hidden;
     cursor: pointer;
-    border: solid 0.5vw #f4f4f4;
+    border: solid 0.3vw #f4f4f4;
     background-color: rgba(21, 21, 21, 0.4);
     width: 100%;
-    height: 35vh;
+    height: 50vh;
   }
   #topArticle h1 {
-    font-size: 5vw;
+    font-size: 10vw;
     z-index: 20;
   }
   #topArticle p {
-    font-size: 2vw;
+    font-size: 6vw;
     padding: 1vw 0.5vw;
     z-index: 20;
   }
   #topArticle .hBox {
-    height: 42%;
+    height: 45%;
   }
   #topArticle .topic {
     width: 50%;
-    height: 10%;
-    font-size: 2vw;
-    padding-top: 0.3%;
+    height: 12%;
+    font-size: 6vw;
+    padding-top: 1.6%;
   }
   .topic {
     width: 40%;
     height: 8%;
     font-size: 2vw;
+    border-radius: 0 3vw 3vw 0;
   }
   .hBox {
     height: 28%;
@@ -861,7 +863,7 @@ footer {
             justify-content: flex-end;
     overflow: hidden;
     cursor: pointer;
-    border: solid 0.5vw #f4f4f4;
+    border: solid 0.3vw #f4f4f4;
     background-color: rgba(21, 21, 21, 0.4);
     height: 40vh;
     width: 30vw;
@@ -889,7 +891,7 @@ footer {
             justify-content: flex-end;
     overflow: hidden;
     cursor: pointer;
-    border: solid 0.5vw #f4f4f4;
+    border: solid 0.3vw #f4f4f4;
     background-color: rgba(21, 21, 21, 0.4);
     height: 40vh;
     width: 30vw;
@@ -920,7 +922,7 @@ footer {
             justify-content: flex-end;
     overflow: hidden;
     cursor: pointer;
-    border: solid 0.5vw #f4f4f4;
+    border: solid 0.3vw #f4f4f4;
     background-color: rgba(21, 21, 21, 0.4);
     height: 40vh;
     width: 30vw;
@@ -940,7 +942,7 @@ footer {
             justify-content: flex-end;
     overflow: hidden;
     cursor: pointer;
-    border: solid 0.5vw #f4f4f4;
+    border: solid 0.3vw #f4f4f4;
     background-color: rgba(21, 21, 21, 0.4);
     width: 100vw;
     height: 50vh;
